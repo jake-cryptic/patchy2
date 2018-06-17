@@ -1,0 +1,62 @@
+#titleBar {
+	position:absolute;
+	width:90%;
+	height:auto;
+	margin-left:10%;
+	line-height:3em;
+	top:0;
+}
+.mainTitle {
+	margin:0;
+	display:inline;
+	font-size:2.7em;
+	font-weight:100;
+}
+.mainShortDesc {
+	margin:0;
+	display:inline;
+	color:#E6E6E6;
+	font-size:0.9em;
+	font-weight:100;
+}
+/*
+ * 
+ * Main Page Styles
+ * 
+ */
+#createAccountSide, #loginAccountSide {
+	top:3em;
+	position:relative;
+	width:50%;
+	height:auto;
+	text-align:center;
+}
+#createAccountSide { float:left; }
+#loginAccountSide { float:right; }
+#notificationArea {
+	top:3em;
+	position:relative;
+	width:100%;
+	height:auto;
+	text-align:center;
+}
+/*.hasNotification-g { background-color:rgba(0,255,-,0.6); margin:.5% 0 .5% 0; padding:1.5% 0 1.5% 0; }
+.hasNotification-y { background-color:rgba(255,153,0,0.6); margin:.5% 0 .5% 0; padding:1.5% 0 1.5% 0; }
+.hasNotification-r { background-color:rgba(255,0,0,0.6); margin:.5% 0 .5% 0; padding:1.5% 0 1.5% 0; }*/
+.hasNotification { background-color:rgba(255,255,255,0.55); margin:.5% 0 .5% 0; padding:1.5% 0 1.5% 0; }
+.createTitle, .loginTitle {
+	font-size:1.75em;
+	font-family:sans-serif;
+}
+.formError {
+	font-size:1.2em;
+	text-align:center;
+}
+#footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:auto;
+	text-align:center;
+	font-size:1.3em;
+}

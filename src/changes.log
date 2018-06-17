@@ -1,0 +1,89 @@
+--------------------------------------- Patchy ---------------------------------------
+                       Last Updated: 17th January 2016 @ 00:52                       
+__
+##_2.0: (6th October 2015) {Major Update}_##
+
+- Server now hashes password with SHA512 on client side before sending it to the server
+- navigation.php created; site wide navigation bar
+- Admin control panel now shows for permission level 4 users
+- Admin Control panel created
+- Admin Control panel extra validation
+- Admin Control panel all users overview
+- Admin Control panel checks for updates using the Patchy asset site
+- Config file now manages patchy size and patch amount
+- New *general* account types (default and premium) set in config.php
+- Account page has a bit more detail
+- When logging in an overlay is applied indicating the user wasn't ignored
+- When creating an account an overlay is applied indicating the user wasn't ignored
+- Fixed a bug where messages may not appear on the login/create page
+- Added hashes.min.js(60KB) to enable javascript hashing
+- Changed upload.php, delete.php, unzip.php to comply with new limiting system
+- ReWorked some code in the main index.php file
+
+
+__
+##_2.1: (7th November 2015) {Security Update}_##
+
+- Session now regenerated when certain actions are carried out
+- document.cookie function has been removed from javascript
+- Bug fixes
+- $usingLinux is now set by config.php automatically
+- Will now detect protocol for links instead of reverting to http
+- Links in most scripts now follow $fullPathToRoot instead of ../ or /
+- When redirecting to the homepage $fullPathToHome is now used
+- Connection now closes upon create.php finishing
+- Admin Users overview AccountType and isActive now strings instead of integers
+- Clicking site help will open an mailto:
+- Added base theme engine, 2.2 will add more theme features
+
+
+__
+##_3.0: (7th January 2016) {Major Update}_##
+
+- Added "security" settings to config.php
+- Patchy installer updated to version 2
+- AJAX file upload
+- Admins can view users specifically
+- document.cookie added to javascript but can be removed by including stopCookieAccess.js
+- Cookie policy alert
+- hashes.min.js size reduced from 60KB to 11.8KB
+- Optimized images
+- Logout bug fixed
+- Admin login bug fixed
+- Altered some styles in both default themes
+- Response messages can be hidden by being clicked on
+- Major security hole closed
+- Google drive now used for update checks
+
+__
+##_3.1: (17th February 2016) {Major Internal Code Update}_##
+
+- Turns out using google drive for update checks was a bad idea (reverted change)
+- Admins can now edit user Email, ID and Account Type
+- Admins can now change user active state
+- readPatchFolder() now alerts user if patch server and db are out of sync
+- Improved AJAX file upload system slightly
+- Patch limiting now more verbose
+- Delete,Upload and Unzip now use new filesystem detection methods (a lot less errors)
+- User can now change their Email and Password
+- Removed $usingLinux variable as it was the cause for a lot of Patchy errors
+- Roadmap now updates from global patchy server over HTTP(Sorry)
+- Fix filetype detection errors
+
+__
+##_3.2: (??) {Small bug update}_##
+
+- Added lastLoginIP and lastLoginDate officially (will be used in v.4.0)
+- if first_run.php is detected patchy will not run
+- admin.php trim and base64_decode functions switched.. Avoid future errors
+- admin.php navigation edited
+- admin.php you can now view the config.php file
+- New function in funcs.php
+- init.php will now check that $fullPathToRoot is correct, if not patchy will return an error
+- if site is running in Debug mode, logins and creations will be disabled
+- when in debug mode only account types 3 and 4 can log in
+- Fix bug where upon pressing login the create button would say 'Login' not 'Create Account'
+- Fix small text size bug in login.php
+- Fix annoying bug with recount.php where patches wouldn't be counted correctly on Linux Servers
+- Road map now loads from google drive and falls back to global server (Fix permanent loading)
+- Changed redirection after login from home to root, should prevent some issues

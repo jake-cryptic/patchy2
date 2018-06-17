@@ -1,0 +1,8 @@
+# Stop PHP execution in the uploads dir
+SetHandler default-handler
+AddType text/plain php php3 html htm asp py pyc cgi
+
+# Below only works if you can use mod_php5.c
+#<IfModule mod_php5.c>
+#php_flag engine off
+#</IfModule>

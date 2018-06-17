@@ -1,0 +1,74 @@
+--------------------------------------- Patchy ---------------------------------------
+                       Last Updated: 17th January 2016 @ 00:52                       
+--------------------------------------------------------------------------------------
+2.0: (6th October 2015) {Major Update}
+
+- Server now hashes password with SHA-512 on client side before sending it to the server
+- navigation.php created; site wide navigation bar
+- Admin control panel now shows for permission level 4 users
+- Admin Control panel created
+- Admin Control panel extra validation
+- Admin Control panel all users overview
+- Admin Control panel checks for updates using http://patchy-a.co.nf/ (Patchy asset site)
+- Config file now manages patchy size and patch amount
+- New *general* account types (default and premium) set in config.php
+- Account page has a bit more detail
+- When logging in an overlay is applied indicating the user wasn't ignored
+- When creating an account an overlay is applied indicating the user wasn't ignored
+- Fixed a bug where messages may not appear on the login/create page
+- Added hashes.min.js(60KB) to enable javascript hashing
+- Changed upload.php, delete.php, unzip.php to comply with new limiting system
+- Re-Worked some code in the main index.php file
+
+
+--------------------------------------------------------------------------------------
+2.1: (7th November 2015) {Security Update}
+
+- Session now regenerated when certain actions are carried out
+- document.cookie function has been removed from javascript
+- Bug fixes
+- $usingLinux is now set by config.php automatically
+- Will now detect protocol for links instead of reverting to http
+- Links in most scripts now follow $fullPathToRoot instead of ../ or /
+- When redirecting to the homepage $fullPathToHome is now used
+- Connection now closes upon create.php finishing
+- Admin Users overview AccountType and isActive now strings instead of integers
+- Clicking site help will take you to http://patchy-a.co.nf/help.php
+- Added base theme engine, 2.2 will add more theme features
+
+
+--------------------------------------------------------------------------------------
+3.0: (7th January 2016) {Major Update} (CodeName: Cheetah)
+
+- Added "security" settings to config.php
+- Patchy installer updated to version 2
+- AJAX file upload
+- Admins can view users specifically
+- document.cookie added to javascript but can be removed by including stopCookieAccess.js
+- Cookie policy alert
+- hashes.min.js size reduced from 60KB to 11.8KB
+- Optimized images
+- Logout bug fixed
+- Admin login bug fixed
+- Altered some styles in both default themes
+- Response messages can be hidden by being clicked on
+- Major security hole closed
+- Google drive now used for update checks
+
+--------------------------------------------------------------------------------------
+3.1: (17th February 2016) {Major Internal Code Update} (CodeName: Darkness)
+!! THIS VERSION ADDS 2 NEW COLUMNS TO THE DATABASE WHICH WILL BE USED IN THE FUTURE
+!! UPDATING THE DATABASE IS OPTIONAL BUT IS RECCOMENDED AT THIS STAGE
+
+- Admins can now edit user Email, ID and Account Type
+- Admins can now change user active state
+- readPatchFolder() now alerts user if patch server and db are out of sync
+- Improved AJAX file upload system slightly
+- Patch limiting now more verbose
+- Delete,Upload and Unzip now use new filesystem detection methods (a lot less errors)
+- User can now change their Email and Password
+- Removed $usingLinux variable as it was the cause for a lot of Patchy errors
+- Roadmap now updates from global patchy server
+- Fix filetype detection errors
+
+--------------------------------------------------------------------------------------

@@ -1,0 +1,6 @@
+Admin's can search for users
+Admin's can delete users and/or their patches
+View patches in real time without re-uploading (will require an exe to be called as there is no PHP implementation of LZMA)
+Make the upload bar look better (will probably use bootstrap styles..)
+Create fingerprint.json file for a single patch or all patches
+Store last password and password change time in db
